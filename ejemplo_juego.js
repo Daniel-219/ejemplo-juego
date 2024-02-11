@@ -1,5 +1,5 @@
 
-
+/*funcion para cambio de idioma */
 const es_language = {
   h1: "Formulario de Registro de Usuario"
   , labelNombres: "Nombres"
@@ -47,5 +47,3 @@ bcrypt.compare(myPlaintextPassword, hash, function(err, result) {
       // Si la contraseña no coincide, muestra un mensaje de error.
   }
 });
-
-

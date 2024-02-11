@@ -1,14 +1,10 @@
+ 
 
-        .boton-derecha {
-            position: absolute;
-            top: 0;
-            right: 0;
-        }
-
-/*poner fondo a la web*/
-body {
+ 
+ /*poner fondo a la web*/
+ body {
     /* Ruta a tu imagen de fondo */
-    background-image: url('multimedia/fondos/ejemplo_juego2.jpg');
+    background-image: url('multimedia/fondos/fondo_game.jpg');
 
     /* Centrar y escalar la imagen de fondo */
     background-position: center;
@@ -65,18 +61,13 @@ button {
     cursor: pointer;
 }
 
-/*este item sirve para poner el texto color blanco*/
-.item-label {
+.item-label{
     color: white;
 }
-.sexo-item{  
+.regis{
     display: flex;
     flex-direction: row;
 }
-#button{
-    background-color: rgb(13, 193, 190); color: white;
-}
-#password{
-    display: flex;
-    flex-direction: column;
+.titulo{
+    font-family: 'Kaoly', serif;
 }

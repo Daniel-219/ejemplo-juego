@@ -9,68 +9,11 @@
     <link type="image/x-icon" rel="icon" href="./multimedia/icono/games.ico">
 
     <title>Arcadia</title>
+    <link rel="stylesheet" type="text/css" href="ejemplo_juego.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kaoly">
 
-    <style>
-        /*poner fondo a la web*/
-        body {
-            /* Ruta a tu imagen de fondo */
-            background-image: url('multimedia/fondos/fondo_game.jpg');
+    <h1 class="item-label">Iniciar sesión</h1>
 
-            /* Centrar y escalar la imagen de fondo */
-            background-position: center;
-            background-size: cover;
-
-            /* Configurar la animación */
-            animation: fondoDinamico 5s infinite;
-        }
-
-        /* Definir la animación */
-        @keyframes fondoDinamico {
-            0% {
-                background-color: red;
-            }
-
-            50% {
-                background-color: green;
-            }
-
-            100% {
-                background-color: blue;
-            }
-        }
-
-        /*este apartado sirve para limitar los botones d inteccion con el usurio*/
-
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f0f0f0;
-        }
-
-        form {
-            display: flex;
-            flex-direction: column;
-            width: 200px;
-        }
-
-        input {
-            margin-bottom: 10px;
-            padding: 10px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-        }
-
-        button {
-            padding: 10px;
-            border-radius: 5px;
-            border: none;
-            background-color: #007BFF;
-            color: white;
-            cursor: pointer;
-        }
-    </style>
 </head>
 
 <body>
@@ -78,16 +21,23 @@
     <!--figure para agregar una imagen-->
     <figure>
         <figcaption></figcaption>
-        <img src="./multimedia/logo/logo_juego.jpg" width="300" alt="Juegos Arcadia">
+        <img src="./multimedia/logo/logo4.jpg" width="100" alt="Juegos Arcadia">
     </figure>
 
     <form id="loginForm">
         <input type="text" id="username" placeholder="Nombre de usuario" required>
         <input type="password" id="password" placeholder="Contraseña" required>
+        
+        <div class="regis">
         <input type="checkbox" id="opcion1" name="opcion1" value="Opción1">
+        <label for="opción1" class="item-label"> Acepto las bases y condiciones </label>
+    </div>
 
-        <label for="opción1" style="color: white;"> Acepto las bases y condiciones </label>
         <button type="submit">Iniciar sesión</button>
+
+        
+            <a href="ejemplo_juego_inicio.html" target="_blank" class="item-label">Registrate aqui</a>
+
     </form>
 
     <script src="./ejemplo_juego.js"></script>

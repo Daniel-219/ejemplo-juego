@@ -12,8 +12,8 @@ function changeLanguage() {
   ]
   , botones= [
       { btnCrear: ["Crear", "New"] }
-      , { btnSalir: ["Salir", "Quit"] }
-    ]
+      , { btnSalir: ["Salir", "Quit"]}
+    ]
 , password=[
   {
 
