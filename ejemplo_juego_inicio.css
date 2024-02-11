@@ -1,0 +1,71 @@
+/*poner fondo a la web*/
+body {
+    /* Ruta a tu imagen de fondo */
+    background-image: url('multimedia/fondos/ejemplo_juego2.jpg');
+
+    /* Centrar y escalar la imagen de fondo */
+    background-position: center;
+    background-size: cover;
+
+    /* Configurar la animación */
+    animation: fondoDinamico 5s infinite;
+}
+
+/* Definir la animación */
+@keyframes fondoDinamico {
+    0% {
+        background-color: red;
+    }
+
+    50% {
+        background-color: green;
+    }
+
+    100% {
+        background-color: blue;
+    }
+}
+
+/*este apartado sirve para limitar los botones d inteccion con el usurio*/
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}
+
+input {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+}
+
+/*este item sirve para poner el texto color blanco*/
+.item-label {
+    color: white;
+}
+.sexo-item{
+    display: flex;
+    flex-direction: row;
+}
+#button{
+    background-color: rgb(13, 193, 190); color: white;
+}

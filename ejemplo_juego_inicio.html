@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--este link sirve para agregar icono al navegador-->
+    <link type="image/x-icon" rel="icon" href="./multimedia/icono/games.ico">
+
+    <title>Arcadia</title>
+    <link rel="stylesheet" type="text/css" href="ejemplo_juego_inicio.css">
+</head>
+
+<body>
+
+    <form id="loginForm" action="https://www.youtube.com" method="post">
+
+        <input type="text" id="username" placeholder="Nombre del usuario" required>
+
+        <input type="text" id="lastname" placeholder="Apellido del usuario" required>
+
+        <input type="text" id="email" placeholder="Email" required>
+
+        <div class="sexo-item">
+            <label class="item-label">Sexo:</label><br>
+            <input type="radio" id="radSexM" class="input-item" name="sexo" value="M">
+            <label for="radSexM" class="item-label">M</label><br>
+            <input type="radio" id="radSexF" class="input-item" name="sexo" value="F">
+            <label for="radSexM" class="item-label">F</label><br>
+            <input type="radio" id="radSexI" class="input-item" name="sexo" value="I">
+            <label for="radSexM" class="item-label">I</label><br>
+        </div>
+
+        <input type="password" id="password" placeholder="Contraseña" required>
+
+        <input type="checkbox" id="opcion1" name="opcion1" value="Opción1">
+        <label for="opción1" class="item-label"> Acepto las bases y condiciones </label>
+
+        <input type="checkbox" id="opcion2" name="opcion2" value="Opción">
+        <label for="opción1" class="item-label"> No soy un robot </label>
+        <input type="submit" id="button" value="Registrarse">
+
+        <!--<button type="submit" value="Registrarse">Registrarse</button>-->
+
+        <a href="ejemplo_juego1.html" target="_blank" class="item-label">Ya tienes una cuenta?</a>
+
+    </form>
+    <script src="./ejemplo_juego_inicio.js"></script>
+</body>
+
+</html>
