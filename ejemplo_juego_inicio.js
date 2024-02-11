@@ -1,4 +1,28 @@
 
+function changeLanguage() {
+  h1: ["Formulario de Registro de Usuario", "User Registration Form"]
+  , labelNombres= ["Nombres", "Name"]
+  , labelApellidos= ["Apellidos", "Last Name"]
+  , radioSexo= [
+      {
+          labelM: ["Masculino", "Male"]
+      }, {
+          labelF: ["Femenino", "Female"]
+      },{}
+  ]
+  , botones= [
+      { btnCrear: ["Crear", "New"] }
+      , { btnSalir: ["Salir", "Quit"] }
+    ]
+, password=[
+  {
+
+  }
+]
+
+  alert('Cambiando el idioma...');
+}
+
 //creando nodos de mi pagina
 const username = document.getElementById("username");
 const lastname = document.getElementById("lastname");

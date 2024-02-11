@@ -1,3 +1,10 @@
+
+        .boton-derecha {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
 /*poner fondo a la web*/
 body {
     /* Ruta a tu imagen de fondo */
@@ -63,9 +70,14 @@ button {
     color: white;
 }
 .sexo-item{
+    
     display: flex;
     flex-direction: row;
 }
 #button{
     background-color: rgb(13, 193, 190); color: white;
+}
+#password{
+    display: flex;
+    flex-direction: column;
 }

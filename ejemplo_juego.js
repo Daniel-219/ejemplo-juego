@@ -1,4 +1,23 @@
 
+
+const es_language = {
+  h1: "Formulario de Registro de Usuario"
+  , labelNombres: "Nombres"
+  , labelApellidos: "Apellidos"
+  , radioSexo: [
+      {
+          labelM: "Masculino"
+      }, {
+          labelF: "Femenino"
+      }
+  ]
+  , botones: [
+      { btnCrear: ["Crear", "New"] }
+      , { btnSalir: ["Salir", "Quit"] }
+  ]
+}
+
+
 let chkOpcion1 = document.getElementById("opcion1");
 chkOpcion1.addEventListener("click", function (e) {
   //alert("hiciste click");
