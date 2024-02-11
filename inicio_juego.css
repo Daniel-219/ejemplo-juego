@@ -1,0 +1,11 @@
+button {
+    margin: 20px;
+    padding: 200px;
+    font-size: 15px;
+}
+.benito {
+    width: 1px;
+    height: 1px;
+    background-image: url('multimedia/fondos/among_us.jpg');
+    border: none;
+}
