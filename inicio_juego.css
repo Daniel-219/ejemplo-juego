@@ -4,8 +4,10 @@ button {
     font-size: 15px;
 }
 .benito {
-    width: 1px;
-    height: 1px;
-    background-image: url('multimedia/fondos/among_us.jpg');
+   /* width: 100px;
+    height: 100px;*/
+    background-image: url('./multimedia/fondos/among_us.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
     border: none;
 }

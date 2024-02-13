@@ -13,13 +13,13 @@
 </head>
 
 <body>
-    <h1 class="item-label">Formulario de Registro de Usuario</h1>
+    <h1 class="item-label" >Formulario de Registro de Usuario</h1>
     <div class="boton-derecha">
         <type="image/x-icon" href="./multimedia/icono/icono_idioma.jpeg" alt="Cambiar idioma"
             onclick="changeLanguage()">
     </div>
 
-    <form id="loginForm" action="/www.youtube.com" method="post" autocomplete="on">
+    <form id="loginForm" autocomplete="on">
 
         <input type="text" id="username" placeholder="Nombre del usuario" required>
 
@@ -28,12 +28,6 @@
         <input type="text" id="email" placeholder="Email" required>
 
         <div class="sexo-item">
-            <!-- <label for="sexo" class="item-label">Seleccione su sexo:</label>
-            <select id="cars" name="cars">
-                <option value="Masculino">Masculino</option>
-                <option value="Femenino">Femenino</option>
-                <option value="Indistinto">Indistinto</option><br>
-            </select>-->
             <label class="item-label">Sexo:</label><br>
             <input type="radio" id="radSexM" class="input-item" name="sexo" value="M">
             <label for="radSexM" class="item-label">M</label><br>
@@ -42,6 +36,7 @@
             <input type="radio" id="radSexI" class="input-item" name="sexo" value="I">
             <label for="radSexM" class="item-label">I</label><br>
         </div>
+
         <div class="password">
 
             <input type="password" id="password" placeholder="Contraseña" required>
