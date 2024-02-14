@@ -1,4 +1,6 @@
 
+JSON.parse(localStorage.getItem("usuario_nuevo"))
+
 /*funcion para cambio de idioma */
 const es_language = {
   h1: "Formulario de Registro de Usuario"

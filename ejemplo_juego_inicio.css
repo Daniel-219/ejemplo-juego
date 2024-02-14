@@ -1,19 +1,14 @@
 
-        .boton-derecha {
-            position: absolute;
-            top: 0;
-            right: 0;
-        }
 
 /*poner fondo a la web*/
 body {
     /* Ruta a tu imagen de fondo */
     background-image: url('multimedia/fondos/ejemplo_juego2.jpg');
-
+    
     /* Centrar y escalar la imagen de fondo */
     background-position: center;
     background-size: cover;
-
+    
     /* Configurar la animación */
     animation: fondoDinamico 5s infinite;
 }
@@ -23,11 +18,11 @@ body {
     0% {
         background-color: red;
     }
-
+    
     50% {
         background-color: green;
     }
-
+    
     100% {
         background-color: blue;
     }
@@ -65,6 +60,11 @@ button {
     cursor: pointer;
 }
 
+.boton-derecha {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
 /*este item sirve para poner el texto color blanco*/
 .item-label {
     color: white;
@@ -79,4 +79,7 @@ button {
 #password{
     display: flex;
     flex-direction: column;
+}
+.centrado {
+    text-align: center;
 }

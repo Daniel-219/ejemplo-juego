@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <h1 class="item-label" >Formulario de Registro de Usuario</h1>
+    <h1 class="item-label" class="centrado">Formulario de Registro<br> de Usuario</h1>
     <div class="boton-derecha">
         <type="image/x-icon" href="./multimedia/icono/icono_idioma.jpeg" alt="Cambiar idioma"
             onclick="changeLanguage()">
@@ -40,13 +40,15 @@
         <div class="password">
 
             <input type="password" id="password" placeholder="Contraseña" required>
+            <input type="password" id="password2" placeholder="Repetir Contraseña" required>
+
 
             <input type="checkbox" id="opcion1" name="opcion1" value="Opción1">
             <label for="opción1" class="item-label"> Acepto las bases y condiciones </label><br>
 
             <input type="checkbox" id="opcion2" name="opcion2" value="Opción">
             <label for="opción1" class="item-label"> No soy un robot </label>
-            <input type="submit" id="button" value="Registrarse">
+            <input type="button" id="btnregistrarse" value="Registrarse">
         </div>
 
             <!--<button type="submit" value="Registrarse">Registrarse</button>-->

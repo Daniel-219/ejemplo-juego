@@ -10,7 +10,7 @@ function changeLanguage() {
       }, {
         labelF: ["Femenino", "Female"]
       }, {
-        labelI: ["Indistino","indistinct"]
+        labelI: ["Indistino", "indistinct"]
       }
     ]
     , botones = [
@@ -22,15 +22,19 @@ function changeLanguage() {
 
   alert('Cambiando el idioma...');
 };
-  document.getElementById('loginForm').addEventListener('submit', function (event) {
-    event.preventDefault();
-    function capturarDatosDelFormulario() {
+
+function agregarEventos() {
+  document.getElementById('btnregistrarse').addEventListener('click', function () {
+    //event.preventDefault();
+
     const username = document.getElementById('username').value.trim();
     const lastname = document.getElementById('lastname').value.trim();
     const email = document.getElementById('email').value.trim();
-    const arrayRadioSexo =document.getElementsByName("sexo").value.trim();
+    const arrayRadioSexo = document.getElementsByName("sexo");
     const password = document.getElementById('password').value.trim();
-    }
+    const password2 = document.getElementById('password2').value.trim();
+    const chkOpcion1 = document.getElementById("opcion1");
+    const chkOpcion2 = document.getElementById("opcion2");
 
     let Masculino = null;
     let Femenino = null;
@@ -40,6 +44,7 @@ function changeLanguage() {
     for (let item of arrayRadioSexo) {
       //Revisar si la propiedad checked es true
       //Revisar si el value del item para saber si es M o F o I
+
       if (item.checked && item.value === "M") {
         estaMarcadoElSexo = true;
         console.log(item.checked);
@@ -53,38 +58,65 @@ function changeLanguage() {
         console.log(item.checked);
       }
     }
-    //Si no se marcó ningun radiobutton se avisa al usuario
-    debugger;
+
     if (!estaMarcadoElSexo) {
-      alert("¿Debe seleccionar el sexo!");
+      alert("Debe seleccionar el sexo!!");
       return;
     }
-    document.addEventListener("DOMContentLoaded", function () {
-      let chkOpcion1 = document.getElementById("opcion1");
-      chkOpcion1.addEventListener("click", function (e) {
-        //alert("hiciste click");
-        console.log(chkOpcion1.checked);
-      });
-    
-      let chkOpcion2 = document.getElementById("opcion2");
-      chkOpcion1.addEventListener("click", function (e) {
-        //alert("hiciste click");
-        console.log(chkOpcion2.checked);
-      });
-    });
+    //Si no se marcó ningun radiobutton se avisa al usuario
+
+
+    if (!username) {
+      alert("Complete su nombre!!");
+      return;
+    }
+    if (!lastname) {
+      alert("Complete su apellido!!");
+      return;
+    }
+    if (!email) {
+      alert("Complete su email!!");
+      return;
+    }
+    if (password !== password2) {
+      alert("Las contraseñas no coinciden!!");
+      return;
+    }
+
+    if (!chkOpcion1.checked) {
+      alert("¿Debe aceptar las bases!");
+      return;
+    }
+
+    if (!chkOpcion2.checked) {
+      alert("Seleccione que no eres un robot!");
+      return;
+    }
 
     console.log('Nombre de usuario: ' + username);
     console.log('Apellido del usuario: ' + lastname);
     console.log('Email: ' + email);
     console.log('Contraseña: ' + password);
+    //si llegamos hasta aqui significa que todo esta validado
+    const usuario = {
+      nombres: username
+      , apellidos: lastname
+      , email: email
+      , contraseña: password
+    }
+    //guardar informacion 
+    const crearUsuario = JSON.stringify(usuario);
+    localStorage.setItem("usuario_nuevo", crearUsuario);
   });
-
-//si llegamos hasta aqui significa que todo esta validado
-const usuario = {
-
-
+  document.getElementById("opcion1").addEventListener('click', function () {
+    alert('presionaste');
+  });
+  document.getElementById("opcion2").addEventListener('click', function () {
+    alert('presionaste');
+  });
 }
-//guardar informacion 
-const crearUsuario = JSON.stringify(loginForm);
-localStorage.setItem("loginForm", crearUsuario);
 
+//funcion principal
+document.addEventListener("DOMContentLoaded", function () {
+  agregarEventos();
+});
