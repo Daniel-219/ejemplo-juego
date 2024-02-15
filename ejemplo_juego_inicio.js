@@ -35,6 +35,27 @@ function agregarEventos() {
     const password2 = document.getElementById('password2').value.trim();
     const chkOpcion1 = document.getElementById("opcion1");
     const chkOpcion2 = document.getElementById("opcion2");
+    //const todosLosCamposLlenos = document.getElementById["username", "lastname", "email", "sexo", "password", "password2", "opcion1", "opcion2"];
+    const listaCampos = ["username", "lastname", "email", "password", "password2"];
+
+    let todosLosCamposLlenos = true;
+      let campos = document.querySelectorAll('input'); // Asume que todos los campos son inputs
+
+      debugger;
+      for(let input of listaCampos) {
+        const elemento = document.getElementById(input);
+        if(!elemento.value.trim()) {
+          todosLosCamposLlenos = false;
+          break;
+        }
+      }
+
+      if (todosLosCamposLlenos) {
+        location.href = 'inicio_juego.html'; // Redirige a la página web
+      } else {
+        alert('Por favor, llena todos los campos.'); // Muestra un mensaje si no todos los campos están llenos
+      }
+
 
     let Masculino = null;
     let Femenino = null;
@@ -119,4 +140,17 @@ function agregarEventos() {
 //funcion principal
 document.addEventListener("DOMContentLoaded", function () {
   agregarEventos();
+
+  let i = 0;
+  let txt = '¡Formulario de Registro!';
+  let speed = 200;
+
+  function typeWriter() {
+    if (i < txt.length) {
+      document.getElementById("textoAnimado").innerHTML += txt.charAt(i);
+      i++;
+      setTimeout(typeWriter, speed);
+    }
+  }
+  //typeWriter();
 });

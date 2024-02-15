@@ -34,7 +34,7 @@ document.getElementById('loginForm').addEventListener('submit', function (event)
   console.log('Contraseña: ' + password);
 
   if (username == "cerebrus" && password == "killer") {
-    window.location.href = "https://images.app.goo.gl/iFDyfcxeFLvQResGA";
+    window.location.href = "inicio_juego.html";
   } else {
     alert("Los datos ingresados no son correctos");
   }
