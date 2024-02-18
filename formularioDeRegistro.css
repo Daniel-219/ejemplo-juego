@@ -1,59 +1,87 @@
-/*poner fondo a la web*/
-body {
-    /* Ruta a tu imagen de fondo */
-    background-image: url('multimedia/fondos/ejemplo_juego2.jpg');
+/* Variables */
+:root {
+    --primary-color: #007BFF;
+    --white-color: white;
+}
 
-    /* Centrar y escalar la imagen de fondo */
+/* Estilos generales */
+body,
+form,
+input,
+button,
+.boton-derecha,
+.item-label,
+.sexo-item,
+#button,
+#password,
+#textoAnimado {
+    box-sizing: border-box;
+}
+
+/* Estilos del cuerpo */
+body {
+    background-image: url('multimedia/fondos/ejemplo_juego2.jpg');
     background-position: center;
     background-size: cover;
-
-    /* Configurar la animación */
     animation: fondoDinamico 5s infinite;
-
-    /* Alinear los elementos al centro */
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    margin: 0;
+    padding: 0;
 }
 
-/* Definir la animación */
 @keyframes fondoDinamico {
-    0% {
+
+    0%,
+    100% {
         background-color: red;
     }
 
     50% {
         background-color: green;
     }
-
-    100% {
-        background-color: blue;
-    }
 }
 
+/* Estilos del formulario */
 form {
     display: flex;
     flex-direction: column;
     width: 200px;
 }
 
-input {
+@media (max-width: 600px) {
+    form {
+        width: 100%;
+    }
+}
+
+/* Estilos de los inputs y botones */
+input,
+button {
     margin-bottom: 10px;
     padding: 10px;
     border-radius: 5px;
+}
+
+input {
     border: 1px solid #ccc;
 }
 
 button {
-    padding: 10px;
-    border-radius: 5px;
     border: none;
-    background-color: #007BFF;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--white-color);
     cursor: pointer;
+    transition: background-color 0.5s ease;
 }
 
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos específicos */
 .boton-derecha {
     height: 10px;
     width: 50px;
@@ -65,19 +93,18 @@ button {
     right: 0;
 }
 
-/*este item sirve para poner el texto color blanco*/
-.item-label {
-    color: white;
+.item-label,
+#button {
+    color: var(--white-color);
+}
+
+#button {
+    background-color: rgb(13, 193, 190);
 }
 
 .sexo-item {
     display: flex;
     flex-direction: row;
-}
-
-#button {
-    background-color: rgb(13, 193, 190);
-    color: white;
 }
 
 #password {
@@ -108,4 +135,12 @@ button {
     100% {
         color: green;
     }
+}
+
+#textoAnimado:active {
+    transform: scale(1.1);
+}
+
+img {
+    alt: 'Descripción de la imagen';
 }

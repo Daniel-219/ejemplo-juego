@@ -1,0 +1,25 @@
+:root {
+    --button-padding: 10px;
+    --button-font-size: 15px;
+    --button-bg-color: #f8f8f8;
+}
+
+.button {
+    margin: 20px;
+    padding: var(--button-padding);
+    font-size: var(--button-font-size);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover,
+.button:focus {
+    background-color: var(--button-bg-color);
+}
+
+.benito {
+    background-image: url('./multimedia/fondos/among_us.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: none;
+}

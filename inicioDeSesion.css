@@ -1,0 +1,65 @@
+/* Variables CSS */
+:root {
+    --main-bg-color: #f0f0f0;
+    --btn-bg-color: #007BFF;
+    --btn-font-color: white;
+    --input-border-color: #ccc;
+    --form-width: 200px;
+    --element-margin: 10px;
+    --element-padding: 10px;
+    --border-radius: 5px;
+}
+
+/* Poner fondo a la web */
+body {
+    /* Ruta a tu imagen de fondo */
+    background: url('multimedia/fondos/fondo_game.jpg') center / cover no-repeat,
+        linear-gradient(0deg, red, green, blue);
+    /* Configurar la animación */
+
+    /* Centrar los elementos */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--main-bg-color);
+}
+
+/* Este apartado sirve para limitar los botones de interacción con el usuario */
+form {
+    display: flex;
+    flex-direction: column;
+    width: var(--form-width);
+}
+
+input,
+button {
+    margin-bottom: var(--element-margin);
+    padding: var(--element-padding);
+    border-radius: var(--border-radius);
+}
+
+input {
+    border: 1px solid var(--input-border-color);
+}
+
+button {
+    border: none;
+    background-color: var(--btn-bg-color);
+    color: var(--btn-font-color);
+    cursor: pointer;
+}
+
+.item-label,
+.regis {
+    color: var(--btn-font-color);
+}
+
+.regis {
+    display: flex;
+    flex-direction: row;
+}
+
+.titulo {
+    font-family: 'Kaoly', serif;
+}
