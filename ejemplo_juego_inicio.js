@@ -39,22 +39,22 @@ function agregarEventos() {
     const listaCampos = ["username", "lastname", "email", "password", "password2"];
 
     let todosLosCamposLlenos = true;
-      let campos = document.querySelectorAll('input'); // Asume que todos los campos son inputs
+    let campos = document.querySelectorAll('input'); // Asume que todos los campos son inputs
 
-      debugger;
-      for(let input of listaCampos) {
-        const elemento = document.getElementById(input);
-        if(!elemento.value.trim()) {
-          todosLosCamposLlenos = false;
-          break;
-        }
+    debugger;
+    for (let input of listaCampos) {
+      const elemento = document.getElementById(input);
+      if (!elemento.value.trim()) {
+        todosLosCamposLlenos = false;
+        break;
       }
+    }
 
-      if (todosLosCamposLlenos) {
-        location.href = 'inicio_juego.html'; // Redirige a la página web
-      } else {
-        alert('Por favor, llena todos los campos.'); // Muestra un mensaje si no todos los campos están llenos
-      }
+    if (todosLosCamposLlenos) {
+      location.href = 'inicio_juego.html'; // Redirige a la página web
+    } else {
+      alert('Por favor, llena todos los campos.'); // Muestra un mensaje si no todos los campos están llenos
+    }
 
 
     let Masculino = null;
@@ -152,5 +152,5 @@ document.addEventListener("DOMContentLoaded", function () {
       setTimeout(typeWriter, speed);
     }
   }
-  //typeWriter();
+  typeWriter();
 });
