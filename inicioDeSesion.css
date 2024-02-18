@@ -63,3 +63,14 @@ button {
 .titulo {
     font-family: 'Kaoly', serif;
 }
+
+.boton-derecha {
+    height: 10px;
+    width: 50px;
+    padding: 9px;
+    border-radius: 5px;
+    border: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+}

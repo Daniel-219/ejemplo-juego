@@ -1,28 +1,30 @@
-// Función auxiliar para cambiar el texto de un elemento
-function setText(selector, text) {
-    const element = document.querySelector(selector);
-    if (element) {
-        element.textContent = text;
+// Definición de los textos para los idiomas
+const languageTexts = {
+    textoAnimado: ["Iniciar sesión", "Log in"],
+    username: ["Nombre de usuario", "Username"],
+    password: ["Contraseña", "Password"],
+    opcion1: ["Acepto las bases y condiciones", "I accept the terms and conditions"],
+    btnregistrarse: ["Iniciar sesión", "Log in"]
+};
+
+let currentLanguage = 0; // 0 para español, 1 para inglés
+
+function changeLanguage() {
+    // Cambia el idioma
+    currentLanguage = 1 - currentLanguage;
+
+    // Actualiza el texto de los elementos
+    for (const id in languageTexts) {
+        const element = document.getElementById(id);
+        if (element) {
+            if (element.tagName === 'INPUT' && element.type === 'text') {
+                element.placeholder = languageTexts[id][currentLanguage];
+            } else {
+                element.textContent = languageTexts[id][currentLanguage];
+            }
+        }
     }
 }
-
-function changeLanguage(langCode) {
-    const lang = languages[langCode];
-    if (!lang) {
-        console.error(`Unsupported language code: ${langCode}`);
-        return;
-    }
-
-    setText('h1', lang.h1);
-    setText('#labelNombres', lang.labelNombres);
-    setText('#labelApellidos', lang.labelApellidos);
-    setText('#labelSexoM', lang.radioSexo.labelM);
-    setText('#labelSexoF', lang.radioSexo.labelF);
-    setText('#btnCrear', lang.botones.btnCrear);
-    setText('#btnSalir', lang.botones.btnSalir);
-}
-
-// ...
 
 async function authenticateUser(username, password) {
     const usuarioNuevo = JSON.parse(localStorage.getItem("usuario_nuevo"));
@@ -40,8 +42,6 @@ async function authenticateUser(username, password) {
         throw new Error("Ocurrió un error al verificar la contraseña. Por favor, inténtalo de nuevo.");
     }
 }
-
-// ...
 
 document.getElementById('loginForm').addEventListener('submit', async function (event) {
     event.preventDefault();
