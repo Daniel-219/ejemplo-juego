@@ -37,36 +37,39 @@ function validarCampo(campo) {
   return campo.value.trim() !== '';
 }
 
+const formElements = {
+  usernameElem: document.getElementById('username'),
+  lastnameElem: document.getElementById('lastname'),
+  emailElem: document.getElementById('email'),
+  passwordElem: document.getElementById('password'),
+  password2Elem: document.getElementById('password2'),
+  chkOpcion1: document.getElementById("opcion1"),
+  chkOpcion2: document.getElementById("opcion2"),
+  arrayRadioSexo: document.getElementsByName("sexo")
+};
+
 function agregarEventos() {
   const btnRegistrarse = document.getElementById('btnregistrarse');
-  const usernameElem = document.getElementById('username');
-  const lastnameElem = document.getElementById('lastname');
-  const emailElem = document.getElementById('email');
-  const passwordElem = document.getElementById('password');
-  const password2Elem = document.getElementById('password2');
-  const chkOpcion1 = document.getElementById("opcion1");
-  const chkOpcion2 = document.getElementById("opcion2");
-  const arrayRadioSexo = document.getElementsByName("sexo");
 
   btnRegistrarse.addEventListener('click', function () {
-    const campos = [usernameElem, lastnameElem, emailElem, passwordElem, password2Elem];
+    const campos = [formElements.usernameElem, formElements.lastnameElem, formElements.emailElem, formElements.passwordElem, formElements.password2Elem];
     const todosLosCamposLlenos = campos.every(validarCampo);
 
-    if (!todosLosCamposLlenos || !chkOpcion1.checked || !chkOpcion2.checked || !arrayRadioSexo.some(radio => radio.checked)) {
+    if (!todosLosCamposLlenos || !formElements.chkOpcion1.checked || !formElements.chkOpcion2.checked || !formElements.arrayRadioSexo.some(radio => radio.checked)) {
       alert('Por favor, llena todos los campos.');
       return;
     }
 
-    if (passwordElem.value !== password2Elem.value) {
+    if (formElements.passwordElem.value !== formElements.password2Elem.value) {
       alert("Las contraseñas no coinciden!!");
       return;
     }
 
     const usuario = {
-      nombres: usernameElem.value,
-      apellidos: lastnameElem.value,
-      email: emailElem.value,
-      contraseña: passwordElem.value
+      nombres: formElements.usernameElem.value,
+      apellidos: formElements.lastnameElem.value,
+      email: formElements.emailElem.value,
+      contraseña: formElements.passwordElem.value
     }
 
     localStorage.setItem("usuario_nuevo", JSON.stringify(usuario));
@@ -74,10 +77,7 @@ function agregarEventos() {
   });
 }
 
-let i = 0;
-let speed = 200;
-
-function typeWriter(elementId) {
+function typeWriter(elementId, i = 0, speed = 200) {
   const element = document.getElementById(elementId);
   const fullText = languageTexts[elementId][currentLanguage];
 
@@ -94,8 +94,7 @@ function typeWriter(elementId) {
   // Escribe el texto letra por letra
   if (i < fullText.length) {
     element.textContent += fullText.charAt(i);
-    i++;
-    setTimeout(() => typeWriter(elementId), speed);
+    setTimeout(() => typeWriter(elementId, i + 1, speed), speed);
   }
 }
 
