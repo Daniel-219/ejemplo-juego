@@ -3,8 +3,9 @@ const languageTexts = {
     textoAnimado: ["Iniciar sesión", "Log in"],
     username: ["Nombre de usuario", "Username"],
     password: ["Contraseña", "Password"],
-    opcion1: ["Acepto las bases y condiciones", "I accept the terms and conditions"],
-    btnregistrarse: ["Iniciar sesión", "Log in"]
+    acepto: ["Acepto las bases y condiciones", "I accept the terms and conditions"],
+    btnregistrarse: ["Iniciar sesión", "Log in"],
+    registrate:["Registrate aqui","Sign up here"]
 };
 
 let currentLanguage = 0; // 0 para español, 1 para inglés
@@ -21,12 +22,15 @@ function changeLanguage() {
                 element.placeholder = languageTexts[id][currentLanguage];
             } else {
                 element.textContent = languageTexts[id][currentLanguage];
-            }
+            }if (element) {
+                element.placeholder = languageTexts[id][currentLanguage];
+          
+              }
         }
     }
 }
 
-async function authenticateUser(username, password) {
+/*async function authenticateUser(username, password) {
     const usuarioNuevo = JSON.parse(localStorage.getItem("usuario_nuevo"));
     if (!usuarioNuevo || usuarioNuevo.username !== username) {
         throw new Error("El nombre de usuario ingresado no existe.");
@@ -41,9 +45,9 @@ async function authenticateUser(username, password) {
         console.error(err);
         throw new Error("Ocurrió un error al verificar la contraseña. Por favor, inténtalo de nuevo.");
     }
-}
+}*/
 
-document.getElementById('loginForm').addEventListener('submit', async function (event) {
+document.getElementById('loginForm').addEventListener('submit', /*async*/ function (event) {
     event.preventDefault();
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
@@ -53,11 +57,11 @@ document.getElementById('loginForm').addEventListener('submit', async function (
         // Mostrar el mensaje de error en la página
         return;
     }
-
-    try {
+});
+    /*try {
         await authenticateUser(username, password);
         window.location.href = "inicio_juego.html";
     } catch (error) {
         // Mostrar el mensaje de error en la página
     }
-});
+});*/

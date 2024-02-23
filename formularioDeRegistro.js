@@ -4,14 +4,13 @@ const languageTexts = {
   username: ["Nombre del usuario", "Username"],
   lastname: ["Apellido del usuario", "Last name"],
   email: ["Email", "Email"],
-  radSexM: ["M", "M"],
-  radSexF: ["F", "F"],
-  radSexI: ["I", "I"],
+  sex: ["sexo", "sex"],
   password: ["Contraseña", "Password"],
   password2: ["Repetir Contraseña", "Repeat Password"],
-  opcion1: ["Acepto las bases y condiciones", "I accept the terms and conditions"],
-  opcion2: ["No soy un robot", "I'm not a robot"],
-  btnregistrarse: ["Registrarse", "Register"]
+  acepBas: ["Acepto las bases y condiciones", "I accept the terms and conditions"],
+  noRobot: ["No soy un robot", "I'm not a robot"],
+  btnregistrarse: ["Registrarse", "Register"],
+  yaCuenta: ["¿Ya tienes una cuenta?","Do you already have an account?"]
 };
 
 let currentLanguage = 0; // 0 para español, 1 para inglés
@@ -29,6 +28,10 @@ function changeLanguage() {
       } else {
         element.textContent = languageTexts[id][currentLanguage];
       }
+    }
+    if (element) {
+      element.placeholder = languageTexts[id][currentLanguage];
+
     }
   }
 }
