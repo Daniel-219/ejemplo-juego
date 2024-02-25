@@ -43,5 +43,3 @@ bcrypt.compare(myPlaintextPassword, hash, function (err, result) {
     // Si la contraseña no coincide, muestra un mensaje de error.
   }
 });
-
-

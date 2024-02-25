@@ -1,16 +1,12 @@
-const links = {
-    'minecraft': 'file:///C:/Users/priet/Desktop/Trabajo_de_investigacion/interfaz.html',
-    'bing': 'https://www.bing.com',
-    'amongus': 'https://www.duckduckgo.com'
-};
+// vistaJuegos.js
+document.getElementById('minecraft').addEventListener('click', function() {
+    window.location.href = 'https://minecraft.net';
+});
 
-for (let id in links) {
-    let element = document.getElementById(id);
-    if (element) {
-        element.addEventListener('click', function () {
-            window.location.href = links[id];
-        });
-    } else {
-        console.warn(`Element with id "${id}" does not exist.`);
-    }
-}
+document.getElementById('bing').addEventListener('click', function() {
+    window.location.href = 'https://www.bing.com';
+});
+
+document.getElementById('amongus').addEventListener('click', function() {
+    window.location.href = 'mi_juego.html';
+});

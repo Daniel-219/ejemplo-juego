@@ -30,38 +30,37 @@ function changeLanguage() {
     }
 }
 
-/*async function authenticateUser(username, password) {
-    const usuarioNuevo = JSON.parse(localStorage.getItem("usuario_nuevo"));
-    if (!usuarioNuevo || usuarioNuevo.username !== username) {
-        throw new Error("El nombre de usuario ingresado no existe.");
-    }
+// inicioDeSesion.js
 
-    try {
-        const result = await bcrypt.compare(password, usuarioNuevo.password);
-        if (!result) {
-            throw new Error("Los datos ingresados no son correctos");
-        }
-    } catch (err) {
-        console.error(err);
-        throw new Error("Ocurrió un error al verificar la contraseña. Por favor, inténtalo de nuevo.");
-    }
-}*/
+// inicioDeSesion.js
 
-document.getElementById('loginForm').addEventListener('submit', /*async*/ function (event) {
-    event.preventDefault();
+function validateForm() {
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
+    const acepto = document.getElementById('opcion1').checked;
 
-    const errorMessage = validateForm(username, password);
-    if (errorMessage) {
-        // Mostrar el mensaje de error en la página
-        return;
+    // Validar que los campos no estén vacíos
+    if (username === '' || password === '') {
+        alert('Por favor, complete todos los campos.');
+        return false;
     }
-});
-    /*try {
-        await authenticateUser(username, password);
-        window.location.href = "inicio_juego.html";
-    } catch (error) {
-        // Mostrar el mensaje de error en la página
+
+    // Validar que el usuario haya aceptado las bases y condiciones
+    if (!acepto) {
+        alert('Por favor, acepte las bases y condiciones.');
+        return false;
     }
-});*/
+
+    // Recuperar los datos de formData de localStorage y convertirlos a un objeto JavaScript
+    const formData = JSON.parse(localStorage.getItem('formData'));
+
+    // Validar que los datos de inicio de sesión coincidan con los almacenados en formData
+    if (username !== formData.username || password !== formData.password) {
+        alert('Nombre de usuario o contraseña incorrectos.');
+        return false;
+    }
+
+    // Si todo está bien, redirigir a vistaJuegos.html
+    window.location.href = 'vistaJuegos.html';
+    return false;  // Para prevenir el comportamiento por defecto del formulario
+}
