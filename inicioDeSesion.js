@@ -5,7 +5,7 @@ const languageTexts = {
     password: ["Contraseña", "Password"],
     acepto: ["Acepto las bases y condiciones", "I accept the terms and conditions"],
     btnregistrarse: ["Iniciar sesión", "Log in"],
-    registrate:["Registrate aqui","Sign up here"]
+    registrate: ["Registrate aqui", "Sign up here"]
 };
 
 let currentLanguage = 0; // 0 para español, 1 para inglés
@@ -22,17 +22,13 @@ function changeLanguage() {
                 element.placeholder = languageTexts[id][currentLanguage];
             } else {
                 element.textContent = languageTexts[id][currentLanguage];
-            }if (element) {
+            } if (element) {
                 element.placeholder = languageTexts[id][currentLanguage];
-          
-              }
+
+            }
         }
     }
 }
-
-// inicioDeSesion.js
-
-// inicioDeSesion.js
 
 function validateForm() {
     const username = document.getElementById('username').value;
