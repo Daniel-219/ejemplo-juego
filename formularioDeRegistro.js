@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function () {
       };
 
       localStorage.setItem('formData', JSON.stringify(data));
-      window.location.href = 'vistaJuedos.html';
+      window.location.href = 'vistaJuegos.html';
     } else {
       alert('Por favor, rellena todos los campos correctamente.');
     }
