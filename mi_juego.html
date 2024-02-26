@@ -3,26 +3,25 @@
 
 <head>
     <meta charset="UTF-8">
-    <!--este link sirve para agregar icono al navegador-->
-    <link type="image/x-icon" rel="icon" href="./multimedia/icono/logo2.ico">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Among Us</title>
+    <link rel="icon" type="image/x-icon" href="./multimedia/icono/logo2.ico">
     <meta name="description" content="Among us">
     <meta name="keywords" content="Arcadia, Among Us">
-
-    <title>Among Us</title>
-    <link rel="stylesheet" type="text/css" href="mi_juego.css">
+    <link rel="stylesheet" href="mi_juego.css">
 </head>
 
 <body>
-    <video autoplay muted loop id="myVideo">
+    <video id="myVideo" autoplay muted loop>
         <source src="./multimedia/fondos/video/fondo_amoug.mp4" type="video/mp4" alt="Fondo de Among Us">
+        Tu navegador no soporta el elemento de video.
     </video>
     <div class="menu">
-        <h1>AMONG US</h1>
-        <button>LOCAL</button>
-        <button>EN LINEA</button>
-        <button>COMO JUGAR</button>
-        <button>MODO LIBRE</button>
+        <h1 id="titulo">AMONG US</h1>
+        <button id="local">LOCAL</button>
+        <button id="enLinea">EN LINEA</button>
+        <button id="comoJugar">COMO JUGAR</button>
+        <button id="modoLibre">MODO LIBRE</button>
     </div>
     <script src="mi_juego.js"></script>
 </body>
