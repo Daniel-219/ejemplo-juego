@@ -1,4 +1,3 @@
-/* vistaJuegos.css */
 #myVideo {
     position: fixed;
     right: 0;
@@ -36,7 +35,7 @@ main {
 }
 
 .fabian {
-    background: url('./multimedia/fondos/ejemplo_juego2.jpg') no-repeat center center/cover;
+    background: url('./fabian/media/menuminecraft.jpg') no-repeat center center/cover;
 }
 
 .sebas {

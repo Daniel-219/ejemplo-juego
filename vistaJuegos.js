@@ -1,6 +1,5 @@
-// vistaJuegos.js
 document.getElementById('minecraft').addEventListener('click', function () {
-    window.location.href = 'https://minecraft.net';
+    window.location.href = './fabian/interfaz.html';
 });
 
 document.getElementById('bing').addEventListener('click', function () {
