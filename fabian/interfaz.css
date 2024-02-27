@@ -1,0 +1,61 @@
+
+
+#titulo{
+    background-image: url(media/minepng.png);
+    background-size:600px, 800px;
+    background-repeat: no-repeat;
+    margin-top: 50px;
+    margin-left: 300px;
+    margin-right: 300px;
+    height: 100px;
+    width: 600px;
+    border-radius: 10px;
+}
+
+#titulo:hover{
+    background-color: green;
+    opacity:0.5;
+}
+
+#cent{
+    margin-top: 50px;
+}
+
+.btn{
+
+    width: 400px;
+  
+    background-color: rgb(119, 119, 145);
+    border-radius:5px;
+    padding:25px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.enl{
+    
+    text-decoration: none;
+    
+}
+
+.btn:hover{
+    
+    background-color: rgb(58, 58, 59);
+color: rgb(131, 255, 69);
+}
+
+body{
+background-image: url(media/minecraft\ fondo.gif);
+background-size:cover;
+background-position: 0px;
+
+}
+#vers{
+    color: black;
+    text-decoration: none;
+}
+#vers:hover{
+    color: rgb(241, 255, 241); ;
+}
+#audio{
+    opacity:0.1;
+}

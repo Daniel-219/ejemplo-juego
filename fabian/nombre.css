@@ -1,0 +1,63 @@
+
+.dv1{
+    
+    margin-top : 50px;
+    margin-left: 500px;
+    margin-right: 500px;
+    
+    padding-top: 50px;
+    text-align: center;
+    background-color: rgb(90, 136, 97);
+    background-size: cover;
+    opacity: 0.9;
+}
+#name{
+    margin-right: 19px;
+    padding-right: 8px;
+   
+}
+#email{
+    margin-right: 15px;
+    padding-right: 8px;
+}
+#pass{
+    margin-right: 37px;
+    padding-right: 8px;
+}
+#reg{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 80px;
+    padding-right: 80px;
+    background-color: gray;
+    color: black;
+    margin-top: 5px;
+}
+#reg:hover{
+    background-color: rgb(74, 72, 72);
+    color: chartreuse;
+}
+#enviar{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 72px;
+    padding-right: 72px;
+    background-color: gray;
+    color: black;
+}
+#enviar:hover{
+    background-color: rgb(74, 72, 72);
+    color: chartreuse;
+}
+body{
+    
+    background-image: url(media/menuminecraft.jpg);
+    background-size: cover;
+    background-position: 0px;
+    margin-top:150px;
+}
+
+#tienes{
+   
+    color: black;
+}
